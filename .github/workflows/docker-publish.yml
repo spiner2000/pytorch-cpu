@@ -2,8 +2,8 @@ name: Build and Publish Docker image
 
 on:
   push:
-    branches:
-      - master
+    # branches:
+    #   - master
     tags:
       - 'v*'  # Trigger on ANY tag (not just 'v*')
   pull_request:
