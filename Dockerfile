@@ -1,7 +1,8 @@
 # Dockerfile
 FROM python:3.11-slim as builder
 RUN pip3 --disable-pip-version-check install torch==2.6.0+cpu --target=/deps --index-url https://download.pytorch.org/whl/cpu
-RUN pip3 --disable-pip-version-check install transformers huggingface_hub sentence-transformers --target=/deps
+RUN pip3 --disable-pip-version-check install transformers huggingface_hub --target=/deps
+RUN pip3 --disable-pip-version-check install sentence-transformers[onnx] --target=/deps
 
 
 # RUN mkdir -p /model && \
