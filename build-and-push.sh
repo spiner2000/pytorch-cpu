@@ -18,7 +18,7 @@ if [ -z "$VERSION" ]; then
 fi
 
 # Устанавливаем имя образа
-IMAGE_NAME="sc-docker-registry.io:30500/docker-pytorch"
+IMAGE_NAME="ghcr.io/spiner2000/pytorch-cpu"
 echo "Строим образ: $IMAGE_NAME:$VERSION"
 # Строим Docker-образ с указанным тегом и latest
 docker build  -t ${IMAGE_NAME}:${VERSION} -t ${IMAGE_NAME}:latest .
